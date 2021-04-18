@@ -34,3 +34,4 @@ class WebWindow():
   def close(self):
       flag = False
       self.conn.send([None, flag])
+      self.conn.close()
