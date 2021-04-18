@@ -2,6 +2,7 @@
 from importlib import import_module
 import os
 from flask import Flask, render_template, Response
+from flask_ngrok import run_with_ngrok
 
 # import camera driver
 if os.environ.get('CAMERA'):
@@ -13,7 +14,7 @@ else:
 # from camera_pi import Camera
 
 app = Flask(__name__)
-
+run_with_ngrok(app)  # Start ngrok when app is run
 
 @app.route('/')
 def index():
@@ -37,4 +38,4 @@ def video_feed():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True)
+    app.run()
