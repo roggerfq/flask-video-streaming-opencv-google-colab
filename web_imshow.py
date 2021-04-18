@@ -27,7 +27,7 @@ class WebWindow():
       try:
           data = subprocess.check_output(['lsof', '-i:{}'.format(port)]).decode().split('\n')[1]
           pid = re.match('^([a-zA-Z0-9]+)(\s+)([0-9]+)\s', data).groups()[2]
-          print('flask: '+ str(pid))
+          #print('flask: '+ str(pid))
           os.kill(int(pid), signal.SIGTERM) #or signal.SIGKILL 
       except:
           #print('pass flask')
