@@ -37,7 +37,7 @@ class WebWindow():
           str_pid_list = get_pid('ngrok').decode("utf-8").split(' ')
           for str_pid in str_pid_list:
               pid = int(str_pid)
-              print('ngrok: '+ str(pid))
+              #print('ngrok: '+ str(pid))
               os.kill(pid, signal.SIGTERM) #or signal.SIGKILL 
       except: 
           #print('pass ngrok')
