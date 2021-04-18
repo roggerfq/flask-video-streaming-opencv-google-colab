@@ -30,7 +30,7 @@ class WebWindow():
           print('flask: '+ str(pid))
           os.kill(int(pid), signal.SIGTERM) #or signal.SIGKILL 
       except:
-          print('pass flask')
+          #print('pass flask')
           pass
 
       try:
@@ -40,7 +40,7 @@ class WebWindow():
               print('ngrok: '+ str(pid))
               os.kill(pid, signal.SIGTERM) #or signal.SIGKILL 
       except: 
-          print('pass ngrok')
+          #print('pass ngrok')
           pass
 
       #________________________________________________________
