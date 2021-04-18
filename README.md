@@ -49,6 +49,8 @@ while(True):
 webWindow.close()
 ```
 
+Run this code in [Google Colab](https://colab.research.google.com/drive/104zo40yNTVK6s_HDGW8OiUfI6uMO6FuT?usp=sharing)
+
 Result
 ------------
 ![alt text](https://raw.githubusercontent.com/roggerfq/flask-video-streaming-opencv-google-colab/master/result.png)
